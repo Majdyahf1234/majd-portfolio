@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://majdyahf1234.github.io/majd-portfolio/sitemap.xml
