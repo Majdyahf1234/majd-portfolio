@@ -3,8 +3,8 @@
 <head>
   <meta name="google-site-verification" content="qSZz_mOYBJnxydVqettHjtZZfaYpHjDfIz5h91Pdz8Q" />
   <meta name="description" content="Official website and CV of Majd Yahfoufi - App & Web Developer specializing in Java, C#, Flutter, Angular and full-stack development.">
-<meta name="keywords" content="Majd Yahfoufi, Majd Walid Yahfoufi, app developer, web developer, Lebanon developer, portfolio">
-<meta name="author" content="Majd Yahfoufi">
+  <meta name="keywords" content="Majd Yahfoufi, Majd Walid Yahfoufi, app developer, web developer, Lebanon developer, portfolio">
+  <meta name="author" content="Majd Yahfoufi">
   <meta charset="UTF-8" />
   <title>Majd Walid Yahfoufi | App & Web Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -508,7 +508,7 @@
       margin-bottom: 6px;
     }
 
-    .contact-faux-form {
+    .contact-form {
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -521,6 +521,22 @@
       background: rgba(15, 23, 42, 0.95);
       padding: 8px 10px;
       color: var(--muted);
+    }
+
+    .input input,
+    .input textarea {
+      width: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13px;
+    }
+
+    .input textarea {
+      resize: vertical;
+      min-height: 80px;
     }
 
     footer {
@@ -608,13 +624,14 @@
           <a href="#contact" class="btn btn-primary">
             Contact Me
           </a>
+          <!-- Make sure Majd_Yahfoufi_CV.pdf is in the same folder -->
           <a href="Majd_Yahfoufi_CV.pdf" class="btn btn-ghost" target="_blank">
             Download CV
           </a>
         </div>
 
         <div class="hero-social">
-          <a href="mailto:majdyahfoufi313@gmail.com">
+          <a href="mailto:majdyahfoufi84@gmail.com">
             <span>Email</span> majdyahfoufi84@gmail.com
           </a>
           <a href="https://github.com/Majdyahf1234" target="_blank">
@@ -910,7 +927,7 @@
             </div>
             <div>
               <span class="contact-label">Email:</span>
-              <a href="mailto:majdyahfoufi313@gmail.com">majdyahfoufi84@gmail.com</a>
+              <a href="mailto:majdyahfoufi84@gmail.com">majdyahfoufi84@gmail.com</a>
             </div>
             <div>
               <span class="contact-label">GitHub:</span>
@@ -930,16 +947,22 @@
 
         <div class="card card-subtle">
           <div class="contact-form-hint">
-            You can adapt this form layout to connect it with any backend or service (e.g., Formspree, Netlify Forms).
+            Fill this form and your email app will open with your message ready to send.
           </div>
-          <div class="contact-faux-form">
-            <div class="input">Your Name</div>
-            <div class="input">Your Email</div>
-            <div class="input">Message</div>
-            <div class="btn btn-primary" style="justify-content: center; width: 130px;">
-              Send Message
+          <form class="contact-form" action="mailto:majdyahfoufi84@gmail.com" method="POST" enctype="text/plain">
+            <div class="input">
+              <input type="text" name="name" placeholder="Your Name" required />
             </div>
-          </div>
+            <div class="input">
+              <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="input">
+              <textarea name="message" placeholder="Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="justify-content:center; width: 150px;">
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </section>
@@ -955,7 +978,3 @@
   </script>
 </body>
 </html>
-
-
-
-
